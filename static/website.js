@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-const countdownDate = new Date("2024-10-13T23:59:00.000-08:00");
+const countdownDate = new Date("2024-10-13T23:59:00.000-07:00");
     //countdownDate.setMonth(countdownDate.getMonth() + 1); // Add 1 month to the current date
 
     // Update the countdown every 1 second
