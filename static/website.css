@@ -1193,6 +1193,15 @@ body, html {
         width: 70%; /* Smaller image size for extra small screens */
     }
 
+    .about_us img {
+        margin-left: -325px !important;
+    }
+
+    .about_us p {
+            margin-left: -325px !important;
+
+    }
+
     .connect-btn {
         margin-right: 50px !important;
         margin-top: 20px;
@@ -1212,8 +1221,13 @@ body, html {
         height: 80% !important;
         width: 80% !important;
     }
+
     .banner {
         margin-top: 100px;
+    }
+
+    html {
+        overflow-x: hidden !important;
     }
 }
 
@@ -1223,4 +1237,35 @@ body, html {
 
 .banner {
     margin-top: 50px;
+    margin-right: -60px;
+}
+
+.about_us {
+    margin-left: 160px !important;
+}
+
+.about_us img {
+    margin-top: 100px;
+}
+
+.about_the_game img {
+    margin-top: 120px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.centered-section {
+    text-align: center;
+}
+
+.envirobadge {
+    padding: 0;
+    margin: 0;
+    height: 10% !important;
+    width: 10% !important;
+    margin-left: 1150px;
+    margin-top: -200px;
+    opacity: 0.80;
 }
