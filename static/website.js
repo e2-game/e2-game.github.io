@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     //const countdownDate = new Date("2024-10-13T23:59:00.000-07:00");
-    const countdownDate = new Date("2024-10-3T11:59:00.000-07:00");
+    const countdownDate = new Date("2024-10-03T11:59:00.000-07:00");
     
     // Update the countdown every 1 second
     const countdownInterval = setInterval(function () {
