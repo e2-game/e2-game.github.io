@@ -55,6 +55,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }
 
+    // Select the countdown container
+// Select the countdown container and minute/second elements
+const countdownContainer = document.querySelector('.countdown-container');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+
+// Function to shrink the countdown container
+function shrinkCountdownContainer(scale) {
+    countdownContainer.style.transform = `scale(${scale})`;
+    countdownContainer.style.transformOrigin = 'top left'; // Ensures it shrinks from the top left corner
+}
+
+// Function to hide the minutes and seconds elements
+function hideMinutesAndSeconds() {
+    minutesElement.style.display = 'none';
+    secondsElement.style.display = 'none';
+}
+
+// Function to check screen width and apply changes if under 480px
+function applyCountdownChanges() {
+    if (window.innerWidth <= 480) {
+        hideMinutesAndSeconds();
+        shrinkCountdownContainer(0.70);
+    }
+}
+
+// Call the function on page load
+applyCountdownChanges();
+
+// Optionally, add a resize event listener to handle screen resizing dynamically
+window.addEventListener('resize', applyCountdownChanges);
+
+
+
+
     // Function to change the image backward
     function changeImageBackward() {
         serviceImage.style.opacity = 0;

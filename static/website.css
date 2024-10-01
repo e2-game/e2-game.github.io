@@ -530,6 +530,7 @@ p {
 
     .connect-btn {
         margin-top: 10px !important;
+        margin-right: -100px !important;
     }
 
 }
@@ -568,7 +569,7 @@ p {
     flex-direction: column;
     gap: 10px; /* Adjust the gap between features */
   }
-  
+
   .plan-feature {
     display: flex;
     align-items: center; /* Align checkmarks and text vertically */
@@ -1181,7 +1182,6 @@ body, html {
     .connect-btn {
         position: absolute;
         top: 10px;
-        right: 10px; /* Align button to the right and closer to the top */
     }
 
     .banner {
@@ -1206,7 +1206,7 @@ body, html {
     .banner {
         height: 300px; /* Further adjust banner dimensions */
     }
-    
+
     .about img {
         width: 70%; /* Smaller image size for extra small screens */
     }
@@ -1220,11 +1220,26 @@ body, html {
 
     }
 
-    .connect-btn {
-        margin-right: 50px !important;
-        margin-top: 20px;
+    .banner-logo {
+        margin-left: -50px !important;
     }
- 
+
+    .countdown-container {
+        margin-left: 75px !important;
+        width: 278px !important;
+        margin-top: -80px !important;
+        margin-bottom: -20px !important;
+    }
+
+    .text-wrapper {
+        margin-left: -20px !important;
+    }
+
+    .connect-btn {
+        margin-right: -270px !important;
+        margin-top: 15px;
+    }
+
     #service-image {
         height: 80% !important;
         width: 80% !important;
