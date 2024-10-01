@@ -14,20 +14,22 @@ body {
     padding: 0;
     background-color: #1e1e1e;
     color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
 }
 
 header {
     background-color: #1e1e1e;
     color: #4CAF50;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align logo and button to the left */
     align-items: center;
-    padding: 20px;
+    padding: 15px 10px; /* Adjust padding for smaller mobile screens */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow to sticky nav */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .logo img{
@@ -514,6 +516,22 @@ p {
         flex-direction: column;
         align-items: center;
     }
+
+    .banner-logo {
+        height: 50% !important;
+        width: 50% !important;
+    }
+
+    .logo {
+        height: 70% !important;
+        width: 70% !important;
+        margin-left: -100px;
+    }
+
+    .connect-btn {
+        margin-top: 10px !important;
+    }
+
 }
 
 .slick-prev, .slick-next {
