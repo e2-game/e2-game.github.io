@@ -79,11 +79,16 @@ header {
 }
 
 
+.about_us p {
+    max-width: 300px;
+    margin-left: -200px !important;
+}
+
 .connect-btn {
     color: #1e1e1e;
     background-color: #4CAF50;
     padding: 10px; /* Increased padding on the right */
-    margin-right: 40px;
+    margin-left: 200px !important;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -92,6 +97,17 @@ header {
     text-decoration: none; /* Removed underline */
 }
 
+.lets-go {
+color: #1e1e1e;
+    background-color: #4CAF50;
+    padding: 10px; /* Increased padding on the right */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Removed underline */
+}
 .connect-btn:hover {
     background-color: #388E3C;
     transform: scale(1.05);
@@ -119,17 +135,17 @@ header {
 }
 
 .banner-content {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    width: auto;
 }
 
 .banner-container {
-    position: relative;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* Ensure content stays within the viewport */
+    height: 100vh; /* Full viewport height */
 }
 
 .banner-content {
@@ -151,6 +167,7 @@ p {
     margin: 20px 0;
 }
 
+
 .explore-btn {
     background-color: #4CAF50;
     color: #1e1e1e;
@@ -160,9 +177,8 @@ p {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px; /* Optional: Adjust margin to ensure spacing */
+    margin-top: 20px; /* Standard margin */
     text-decoration: none;
-    margin-top: 50px !important;
 }
 
 .explore-btn:hover {
@@ -170,6 +186,40 @@ p {
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+    .banner {
+        height: 100vh; /* Use full viewport height */
+    }
+
+    .banner-content {
+        width: 90%; /* Ensure content doesn't overflow */
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+    }
+
+    .explore-btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 28px;
+    }
+
+    .explore-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+
+}
 
 .banner-content {
     position: absolute;
@@ -301,210 +351,6 @@ p {
     vertical-align: middle;
 }
 
-/* Slider container */
-
-.slider-container {
-    max-width: 1400px; /* Increase the max width of the slider container */
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 150px;
-}
-
-.reviews-slider {
-    gap: 30px; /* Increase the gap between slides */
-}
-
-.review-slide {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.slick-dots {
-    display: none !important;
-}
-
-
-.carousel-item {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Add space between the cards */
-    flex-wrap: nowrap; /* Ensure no wrapping of items */
-    width: 100%;
-}
-
-.carousel-item div {
-    flex: 1;
-    margin: 0 10px; /* Adds a small margin between cards */
-    max-width: 30%; /* Ensures cards don't stretch too wide */
-}
-
-
-.review-card {
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 8px;
-    border: #323232 2px solid;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 15px;
-    transition: transform 0.2s;
-    cursor: grab;
-    max-width: 600px; /* Adjust width as needed */
-    width: 300px !important;
-    height: 200px !important;
-    font-size: 16px; /* Ensure consistent text size */
-}
-
-.review-card .user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-
-.review-card:active {
-    cursor: grabbing;
-}
-
-
-
-
-.review-card p {
-    margin-top: 10px;
-    margin-left: -60px; /* Adjust to align text under profile image */
-}
-
-.review-card .user-details .subscribers, .review-card .user-details .views {
-    font-size: 0.9em;
-    color: #b3b3b3;
-}
-.review-card .user-details .subscribers::after {
-    content: " • "; /* Dot separator */
-    margin: 0 5px;
-}
-
-.subscribers, .views {
-    font-size: 10px !important;
-    white-space: nowrap; /* Ensures the name stays on one line */
-}
-
-.review-card .user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.subscribers-views::before {
-    content: '•';
-    margin: 0 5px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 150px !important;
-    position: relative;
-}
-
-
-.review-card .user-info img {
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.review-card .user-details {
-    margin-left: 60px; /* Space for the profile image */
-    flex-direction: column;
-    display: flex;
-}
-
-.review-card .user-details .name {
-    font-weight: 600;
-    margin-bottom: 2px;
-}
-.review-card .user-details .subscribers,
-.review-card .user-details .views {
-    font-size: 12px;
-    color: #666;
-}
-
-.user-details {
-    margin-left: 60px;
-    margin-top: -10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.user-details span.name {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.name {
-    white-space: nowrap; /* Ensures the name stays on one line */
-}
-
-.user-details span.subscribers-views {
-    font-size: 14px;
-    color: #ccc;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.user-details span.subscribers-views::after {
-    content: "•";
-    margin: 0 5px;
-}
-
-p {
-    margin: 10px 0 0 60px; /* Positioned more to the left and down */
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-
-
-
-.review-card .profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* New: Adjust slider speed and transition */
-.slick-list {
-    display: flex;
-    justify-content: center;
-}
-
-.slick-track {
-    display: flex;
-}
-
-.slick-slide {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .review-card {
-        max-width: 45%; /* Adjust width for smaller screens */
-    }
-
-    .reviews-slider {
-        gap: 10px; /* Reduce gap on smaller screens */
-    }
-}
 
 @media (max-width: 480px) {
     .review-card {
@@ -518,8 +364,9 @@ p {
     }
 
     .banner-logo {
-        height: 50% !important;
-        width: 50% !important;
+        height: 25% !important;
+        width: 25% !important;
+        margin-right: -100px !important;
     }
 
     .logo {
@@ -534,132 +381,6 @@ p {
     }
 
 }
-
-.slick-prev, .slick-next {
-    z-index: 1;
-    color: #4CAF50;
-}
-
-/* New: Pricing Plan Styles */
-.icon-list {
-    align-items: left !important;
-    font-size: 15px;
-}
-
-.icon-list i {
-    color: #4CAF50;
-    margin-right: 8px; /* Adjust spacing between icon and text */
-}
-
-
-.profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-
-.pricing-plan {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Adjust the gap between features */
-  }
-
-  .plan-feature {
-    display: flex;
-    align-items: center; /* Align checkmarks and text vertically */
-  }
-
-
-.pricing-plans h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.plans {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-.plan {
-    border-radius: 15px;
-    padding: 50px;
-    width: 30%;
-    height: 500px;
-    background-color: #2d2d2d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 10px;
-    position: relative;
-    font-size: 20px;
-    align-items: stretch; /* Ensures all plans have the same height */
-}
-
-.plans {
-    display: flex;
-    justify-content: space-between;
-}
-
-.plan.premium {
-    background-color: #272727;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px 1px #4CAF50; /* Neon blue outline */
-    border: 2px solid #4CAF50; /* Added neon blue border */
-    position: relative;
-}
-
-.plan.premium::before {
-    content: "Suggested";
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: #4CAF50;
-    border: 2px solid #4CAF50; /* Added neon blue border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px 1px #4CAF50; /* Neon blue outline */
-    color: #000;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 225px;
-}
-
-.plan h3 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.plan p {
-    font-size: 24px;
-    margin: 20px 0;
-    color: #4CAF50; /* New: Different color for $99 */
-}
-
-.pricing-btn {
-    font-family: 'Poppins', sans-serif;
-    background-color: #4CAF50;
-    color: #1e1e1e;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.pricing-btn:hover {
-    background-color: #00cccc;
-    transform: scale(1.05);
-}
-
 
 
 /* New: Footer adjustments */
@@ -733,16 +454,32 @@ footer p {
 }
 
 .service-icon-text .feature-description {
-    font-size: 12px;
+    font-size: 16px;
     color: #cccccc;
 }
 
 .feature-text {
     font-size: 30px !important;
+    margin-left: 20px !important;
 }
 
 .feature-description {
-    font-size: 20px !important;
+    font-size: 20px;
+}
+/* Scrollbar for mobile version */
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+    width: 12px !important; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CAF50 !important; /* Scrollbar color */
+    border-radius:10px !important; /* Rounded edges for the scrollbar */
+    border: 3px solid #000 !important; /* Optional border to give padding */
+    overflow-x: hidden !important; /* Prevent horizontal scroll */
+
+}
+
 }
 
 
@@ -1089,7 +826,7 @@ body, html {
     }
 
     ::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
+        background-color: #1e1e1e;
     }
 
     .service-two .service-content {
@@ -1179,6 +916,11 @@ body, html {
         margin: 0 auto;
     }
 
+    .centered-section .small-text {
+       max-width: 60px !important;
+       margin-left: 10px !important;
+    }
+
     .connect-btn {
         position: absolute;
         top: 10px;
@@ -1212,23 +954,57 @@ body, html {
     }
 
     .about_us img {
-        margin-left: -325px !important;
+        margin-left: -150px !important;
     }
 
     .about_us p {
-            margin-left: -325px !important;
+            margin-left: -300px !important;
+    }
 
+    .about_us img {
+        margin-left: -300px !important;
     }
 
     .banner-logo {
         margin-left: -50px !important;
+        height: 10% !important;
+        width: auto;
+    }
+
+    .connect-btn {
+            right: 120px !important;
+
+    }
+
+    .countdown-message {
+        text-align: center !important;
+        margin-bottom: 20px !important;
     }
 
     .countdown-container {
-        margin-left: 75px !important;
-        width: 278px !important;
-        margin-top: -80px !important;
-        margin-bottom: -20px !important;
+        width: 277px !important;
+        margin: 35px !important; /* Center horizontally */
+        text-align: center !important; /* Center text inside */
+        align-items: center !important;
+    }
+
+    .about_service .feature-description p{
+        font-size: 10px !important;
+    }
+
+
+.number-box {
+    margin: 0 auto !important;
+}
+
+
+    .countdown-message p {
+        margin: 0px !important;
+        text-align: center !important;
+    }
+    .explore-btn {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
     .text-wrapper {
@@ -1236,9 +1012,21 @@ body, html {
     }
 
     .connect-btn {
-        margin-right: -270px !important;
-        margin-top: 15px;
+        position: fixed;
+            right: 100px;
+            top: 6px; /* You can adjust this to place it at the correct vertical position */
+            cursor: pointer;
+            z-index: 10000; /* Ensure it stays on top of other content */
     }
+ .connect-btn {
+        position: fixed;
+            right: 100px;
+            top: 6px; /* You can adjust this to place it at the correct vertical position */
+            cursor: pointer;
+            z-index: 10000; /* Ensure it stays on top of other content */
+    }
+
+
 
     #service-image {
         height: 80% !important;
@@ -1278,7 +1066,8 @@ body, html {
 }
 
 .about_us img {
-    margin-top: 100px;
+    margin-top: 150px;
+    margin-left: 240px;
 }
 
 .about_the_game img {
@@ -1293,16 +1082,15 @@ html {
     display: flex;
     gap: 15px;
     width: 480px;
-    text-align: center;
+    text-align: centerZ;
     margin-top: 20px;
-    margin-left: 556px; /* Center it automatically */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
     padding: 20px;
+    margin-left: 580px;
     border-radius: 10px;
     background-color: #222;
     max-width: 90%; /* Adjust as needed */
     overflow: hidden; /* Ensures no overflow */
-    /* or overflow: auto; if you want to allow scrolling */
 }
 
 
@@ -1311,18 +1099,12 @@ html {
     font-size: 1.2em;
     margin-bottom: -10px !important;
     color: #4CAF50;
-    margin-left:378px;
-}
-
-.countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .label {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .number-box {
@@ -1345,9 +1127,9 @@ html {
 }
 
 .countdown-message {
-    margin-left: 383px;
     margin-top: 35px !important;
-    margin-bottom: -15px;
+    margin-bottom: -10px;
+    text-align: center !important;
 }
 
 @keyframes tick {
@@ -1364,6 +1146,15 @@ html {
 
 .centered-section {
     text-align: center;
+}
+
+.centered-section .small-text {
+margin-left: 630px;
+max-width: 400px !important;
+}
+
+.about_the_game .small-text{
+    max-width: 500px;
 }
 
 .envirobadge {
@@ -1385,5 +1176,19 @@ html {
 
 .explore-btn {
     margin-left: 718px;
+}
+
+
+@media (max-width: 480px) {
+    .banner-content img.banner-logo {
+        content: url('./img/e2-logo-mobile.png') !important; /* Replace with your smaller image */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-logo img {
+        width: 10% !important;   /* Smaller size for mobile */
+        height: auto !important; /* Maintain aspect ratio */
+    }
 }
 

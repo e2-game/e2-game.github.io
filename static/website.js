@@ -54,6 +54,29 @@ document.addEventListener('DOMContentLoaded', function () {
             serviceImage.style.opacity = 1;
         }, 500);
     }
+function updateBannerImage() {
+        var bannerLogo = document.querySelector('.banner-logo');
+
+        if (window.innerWidth <= 480) {
+            bannerLogo.src = './img/e2-logo-mobile.png'; // Mobile image
+            bannerLogo.style.width = '10%';  // Set the width to 30%
+            bannerLogo.style.height = 'auto'; // Maintain aspect ratio
+        } else {
+            bannerLogo.src = './img/e2-logo-dark.png'; // Desktop image
+            bannerLogo.style.width = '';  // Reset to original size
+            bannerLogo.style.height = ''; // Reset to original size
+        }
+    }
+
+    // Run function on load and on window resize
+    window.addEventListener('load', updateBannerImage);
+    window.addEventListener('resize', updateBannerImage);
+
+window.addEventListener('resize', centerElement);
+
+
+// Initial call to center the element on page load
+centerElement();
 
     // Select the countdown container
 // Select the countdown container and minute/second elements
