@@ -381,6 +381,11 @@ p {
         margin-right: -100px !important;
     }
 
+    .about_the_game img {
+        margin-top: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
 
 
@@ -562,6 +567,12 @@ iframe {
 
     .video-text {
         max-width: 100%;
+    }
+
+    .about_the_game img {
+        margin-top: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 
@@ -935,10 +946,6 @@ body, html {
         height: 400px; /* Adjust banner dimensions for smaller screens */
     }
 
-    .about img {
-        width: 80%; /* Smaller size for about image */
-        height: auto;
-    }
 }
 
 @media (max-width: 480px) {
@@ -960,20 +967,10 @@ body, html {
         height: 300px; /* Further adjust banner dimensions */
     }
 
-    .about img {
-        width: 70%; /* Smaller image size for extra small screens */
-    }
-
-
     .about_us p {
             max-width: 300px !important;
     }
 
-
-    .about_the_game img {
-        height: 30% !important;
-        width: 30% !important;
-    }
     .banner-logo {
         margin-left: -50px !important;
         height: 10% !important;
@@ -1081,8 +1078,6 @@ body, html {
 
 .about_the_game img {
     margin-top: 220px;
-    height: 30% !important;
-    width: 30% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
