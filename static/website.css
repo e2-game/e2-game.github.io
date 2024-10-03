@@ -81,7 +81,6 @@ header {
 
 .about_us p {
     max-width: 500px;
-    margin-left: -200px !important;
 }
 
 .connect-btn {
@@ -95,6 +94,8 @@ header {
     font-size: 16px;
     transition: background-color 0.3s, transform 0.3s;
     text-decoration: none; /* Removed underline */
+    margin-right: 30px !important;
+    width: 100px !important;
 }
 
 .lets-go {
@@ -504,7 +505,6 @@ iframe {
     flex-direction: column; /* Stacks the text vertically */
     text-align: left;
     justify-content: center;
-    margin-top: 100px;
 }
 
 .big-text {
@@ -756,9 +756,6 @@ body, html {
         align-items: center;
     }
 
-    .connect-btn {
-        margin: 10px 0; /* Adjust margin for better spacing */
-    }
 
     /* Stack the image and text vertically */
     .service {
@@ -870,7 +867,10 @@ body, html {
 .centered-section {
     position: relative;
     text-align: center;
-    margin-top: 50px;
+}
+
+.service-three .text-content {
+    margin-top: 65px !important;
 }
 
 .centered-section .big-text {
@@ -926,11 +926,6 @@ body, html {
         margin: 0 auto;
     }
 
-    .centered-section .small-text {
-       max-width: 60px !important;
-       margin-left: 10px !important;
-    }
-
     .connect-btn {
         position: absolute;
         top: 10px;
@@ -947,6 +942,12 @@ body, html {
 }
 
 @media (max-width: 480px) {
+    .about_us img {
+        height: 30% !important;
+        width: 30% !important;
+        margin: 30px auto !important;
+    }
+
     .logo img {
         width: 35% !important; /* Further adjust logo size for smaller screens */
     }
@@ -963,27 +964,20 @@ body, html {
         width: 70%; /* Smaller image size for extra small screens */
     }
 
-    .about_us img {
-        margin-left: -150px !important;
-    }
 
     .about_us p {
-            margin-left: -300px !important;
+            max-width: 300px !important;
     }
 
-    .about_us img {
-        margin-left: -300px !important;
-    }
 
+    .about_the_game img {
+        height: 30% !important;
+        width: 30% !important;
+    }
     .banner-logo {
         margin-left: -50px !important;
         height: 10% !important;
         width: auto;
-    }
-
-    .connect-btn {
-            right: 120px !important;
-
     }
 
     .countdown-message {
@@ -1064,6 +1058,9 @@ body, html {
         overflow-x: hidden !important;
     }
 }
+.connect-btn {
+     right: 200px !important;
+ }
 
 .banner-content span {
     color: #2E7D32;
@@ -1074,17 +1071,20 @@ body, html {
     margin-right: -60px;
 }
 
-.about_us {
-    margin-left: 160px !important;
-}
+
 
 .about_us img {
     margin-top: 150px;
-    margin-left: 240px;
+    margin-left: 45px !important;
+
 }
 
 .about_the_game img {
     margin-top: 220px;
+    height: 30% !important;
+    width: 30% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 html {
@@ -1105,7 +1105,6 @@ html {
     max-width: 90%; /* Adjust as needed */
     overflow: hidden; /* Ensures no overflow */
 }
-
 
 
 .countdown-message p {
@@ -1191,12 +1190,12 @@ html {
 .banner-logo {
     height: 50%;
     width: 50%;
-    margin-left: 500px;
+    margin-left: 400px;
     margin-bottom: 15px;
 }
 
 .explore-btn {
-    margin-left: 718px;
+    margin-left: 580px;
 }
 
 

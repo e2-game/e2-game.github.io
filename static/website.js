@@ -42,19 +42,43 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     const serviceImage = document.getElementById('service-image');
     const chevron = document.getElementById('next-image');
-    const chevronLeft = document.getElementById('next-image-left'); // Add reference to left arrow
+    const chevronLeft = document.getElementById('next-image-left');
     let intervalId;
 
-    // Function to change the image forward
     function changeImageForward() {
         serviceImage.style.opacity = 0;
-
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % images.length;
             serviceImage.src = images[currentIndex];
             serviceImage.style.opacity = 1;
         }, 500);
     }
+
+    function changeImageBackward() {
+        serviceImage.style.opacity = 0;
+        setTimeout(() => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            serviceImage.src = images[currentIndex];
+            serviceImage.style.opacity = 1;
+        }, 500);
+    }
+
+    function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(changeImageForward, 5000);
+    }
+
+    chevron.addEventListener('click', function () {
+        changeImageForward();
+        resetInterval();
+    });
+
+    chevronLeft.addEventListener('click', function () {
+        changeImageBackward();
+        resetInterval();
+    });
+
+    resetInterval();
 function updateBannerImage() {
         var bannerLogo = document.querySelector('.banner-logo');
 
