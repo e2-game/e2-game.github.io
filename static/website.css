@@ -98,7 +98,7 @@ header {
 }
 
 .lets-go {
-color: #1e1e1e;
+    color: #1e1e1e;
     background-color: #4CAF50;
     padding: 10px; /* Increased padding on the right */
     border: none;
@@ -868,6 +868,7 @@ body, html {
 }
 
 .centered-section {
+    position: relative;
     text-align: center;
     margin-top: 50px;
 }
@@ -876,11 +877,20 @@ body, html {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
+    width: 40%;
+    margin: 0 auto;
+}
+.small-text i {
+    font-size: 1.5rem !important;
+    margin-right: 4px !important;
+    margin-top: 8px;
 }
 
 .centered-section .small-text {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    width: 40%;
+    margin: 0 auto;
 }
 
 .centered-section .btn {
@@ -982,10 +992,13 @@ body, html {
     }
 
     .countdown-container {
-        width: 277px !important;
-        margin: 35px !important; /* Center horizontally */
+        margin: 0 auto !important;
         text-align: center !important; /* Center text inside */
         align-items: center !important;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .about_service .feature-description p{
@@ -1083,10 +1096,10 @@ html {
     gap: 15px;
     width: 480px;
     text-align: centerZ;
+    margin: 0 auto;
     margin-top: 20px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
     padding: 20px;
-    margin-left: 580px;
     border-radius: 10px;
     background-color: #222;
     max-width: 90%; /* Adjust as needed */
@@ -1148,10 +1161,6 @@ html {
     text-align: center;
 }
 
-.centered-section .small-text {
-margin-left: 630px;
-max-width: 400px !important;
-}
 
 .about_the_game .small-text{
     max-width: 500px;
@@ -1162,9 +1171,21 @@ max-width: 400px !important;
     margin: 0;
     height: 10% !important;
     width: 10% !important;
-    margin-left: 1150px;
-    margin-top: -200px;
+    align-items: right;
     opacity: 0.80;
+}
+
+.overlay-image {
+    position: absolute; /* Overlay the image inside the container */
+    top: 30%;
+    right: 10%;
+    max-width: 20%; /* Control the image size */
+    height: auto;
+    width: 50%; /* Makes the image cover the entire container */
+    height: 50%; /* Adjusts the height of the image */
+    object-fit: contain;
+    z-index: 1; /* Ensure the image is behind the content */
+    opacity: 0.75; /* Optional: Change opacity to make it semi-transparent */
 }
 
 .banner-logo {
