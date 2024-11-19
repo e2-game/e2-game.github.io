@@ -1,38 +1,42 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const countdownDate = new Date("2024-10-20T23:59:00.000-07:00");
-    //const countdownDate = new Date("2024-10-03T11:59:00.000-07:00");
-    
-    // Update the countdown every 1 second
-    const countdownInterval = setInterval(function () {
-        const now = new Date().getTime();
-        const timeRemaining = countdownDate - now;
+    include_countdown = false;
+    if(include_countdown){
+        const countdownDate = new Date("2024-10-20T23:59:00.000-07:00");
+        //const countdownDate = new Date("2024-10-03T11:59:00.000-07:00");
 
-        // Time calculations for months, days, hours, minutes, and seconds
-        const oneMonth = 30 * 24 * 60 * 60 * 1000;
-        const oneDay = 24 * 60 * 60 * 1000;
-        const oneHour = 60 * 60 * 1000;
-        const oneMinute = 60 * 1000;
-        const oneSecond = 1000;
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(function () {
+            const now = new Date().getTime();
+            const timeRemaining = countdownDate - now;
 
-        let months = Math.floor(timeRemaining / oneMonth);
-        let days = Math.floor((timeRemaining % oneMonth) / oneDay);
-        let hours = Math.floor((timeRemaining % oneDay) / oneHour);
-        let minutes = Math.floor((timeRemaining % oneHour) / oneMinute);
-        let seconds = Math.floor((timeRemaining % oneMinute) / oneSecond);
+            // Time calculations for months, days, hours, minutes, and seconds
+            const oneMonth = 30 * 24 * 60 * 60 * 1000;
+            const oneDay = 24 * 60 * 60 * 1000;
+            const oneHour = 60 * 60 * 1000;
+            const oneMinute = 60 * 1000;
+            const oneSecond = 1000;
 
-        // Output the result in the respective elements
-        document.getElementById('months').innerHTML = months;
-        document.getElementById('days').innerHTML = days;
-        document.getElementById('hours').innerHTML = hours;
-        document.getElementById('minutes').innerHTML = minutes;
-        document.getElementById('seconds').innerHTML = seconds;
+            let months = Math.floor(timeRemaining / oneMonth);
+            let days = Math.floor((timeRemaining % oneMonth) / oneDay);
+            let hours = Math.floor((timeRemaining % oneDay) / oneHour);
+            let minutes = Math.floor((timeRemaining % oneHour) / oneMinute);
+            let seconds = Math.floor((timeRemaining % oneMinute) / oneSecond);
 
-        // If the countdown is finished, stop the timer
-        if (timeRemaining < 0) {
-            clearInterval(countdownInterval);
-            document.getElementById('countdown-timer').innerHTML = "Time's up!";
-        }
-    }, 1000);
+            // Output the result in the respective elements
+            document.getElementById('months').innerHTML = months;
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+
+            // If the countdown is finished, stop the timer
+            if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown-timer').innerHTML = "Time's up!";
+            }
+        }, 1000);
+    }
+
     const images = [
         './img/e2cardswebsite1.png',
         './img/e2cardswebsite2.png',
